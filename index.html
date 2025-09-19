@@ -12,7 +12,7 @@
     <meta property="og:description" content="Distraction-free navigation designed for scooters and bikes. See only what matters." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://example.com" />
-    <meta property="og:image" content="assets/WhatsApp Image 2025-09-19 at 12.45.36 PM.jpeg" />
+    <meta property="og:image" content="assets/placeholder.svg" />
 
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
     <link rel="preload" href="styles.css" as="style" />
@@ -29,6 +29,7 @@
         <ul id="nav-list" class="nav-list">
           <li><a href="#features">Features</a></li>
           <li><a href="#safety">Safety</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#pricing">Pricing</a></li>
         </ul>
       </nav>
@@ -59,8 +60,8 @@
               </div>
             </div>
             <div class="hero-visual">
-              <div class="device device-16x9" data-parallax>
-                <img loading="eager" fetchpriority="high" src="assets/WhatsApp Image 2025-09-19 at 12.45.36 PM.jpeg" alt="GlideNav device mounted on handlebars" />
+              <div class="device" data-parallax>
+                <img src="assets/device-mock.svg" alt="GlideNav device mounted on handlebars" />
               </div>
             </div>
           </div>
@@ -82,7 +83,9 @@
                 <li>Hands-free voice and haptic cues</li>
               </ul>
             </div>
-            <div class="split-media"></div>
+            <div class="split-media">
+              <img src="assets/placeholder.svg" alt="Bright, simple turn-by-turn display" />
+            </div>
           </div>
         </div>
       </section>
@@ -137,7 +140,18 @@
         </div>
       </section>
 
-      
+      <!-- Gallery -->
+      <section id="gallery" class="section gallery" data-animate="rise">
+        <div class="shell">
+          <h2>In the wild</h2>
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1527601643334-2b5b46fa7ee8?q=80&w=1200&auto=format&fit=crop" alt="Scooter in city" />
+            <img src="https://images.unsplash.com/photo-1493236296276-d17357e28895?q=80&w=1200&auto=format&fit=crop" alt="Bike on road" />
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop" alt="Rider at dusk" />
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Handlebar close-up" />
+          </div>
+        </div>
+      </section>
 
       <!-- Pricing / CTA -->
       <section id="pricing" class="section pricing" data-animate="fade">
@@ -153,11 +167,99 @@
               <a id="purchase" href="#" class="btn btn-primary btn-xl">Reserve your GlideNav</a>
               <p class="tiny">No charge today. Cancel anytime.</p>
             </div>
-            <div class="price-media"></div>
+            <div class="price-media">
+              <img src="assets/placeholder.svg" alt="Box contents: device, mount, cable" />
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal" aria-hidden="true" role="dialog" aria-labelledby="checkout-title" aria-modal="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Close" data-close-modal>×</button>
+        <h2 id="checkout-title">Complete your order</h2>
+        <form id="checkout-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <p class="err" data-err-for="name"></p>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <p class="err" data-err-for="email"></p>
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+1 555 555 5555" required />
+              <p class="err" data-err-for="phone"></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="address1">Address line 1</label>
+            <input type="text" id="address1" name="address1" autocomplete="address-line1" required />
+            <p class="err" data-err-for="address1"></p>
+          </div>
+          <div class="form-row">
+            <label for="address2">Address line 2 (optional)</label>
+            <input type="text" id="address2" name="address2" autocomplete="address-line2" />
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" autocomplete="address-level2" required />
+              <p class="err" data-err-for="city"></p>
+            </div>
+            <div class="form-row">
+              <label for="state">State/Province</label>
+              <input type="text" id="state" name="state" autocomplete="address-level1" required />
+              <p class="err" data-err-for="state"></p>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="country">Country</label>
+              <select id="country" name="country" autocomplete="country" required>
+                <option value="">Select country</option>
+                <option value="IN">India</option>
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="SG">Singapore</option>
+                <option value="">──────────</option>
+                <option value="OTHER">Other</option>
+              </select>
+              <p class="err" data-err-for="country"></p>
+            </div>
+            <div class="form-row">
+              <label for="pin">PIN / Postal code</label>
+              <input type="text" id="pin" name="pin" inputmode="numeric" autocomplete="postal-code" required />
+              <p class="err" data-err-for="pin"></p>
+            </div>
+          </div>
+          <div class="form-grid align-center">
+            <div class="form-row">
+              <label for="qty">Quantity</label>
+              <input type="number" id="qty" name="qty" min="1" max="10" value="1" required />
+              <p class="err" data-err-for="qty"></p>
+            </div>
+            <div class="total">
+              <span>Total</span>
+              <strong id="total-amount">$149</strong>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="button" class="btn btn-ghost" data-close-modal>Cancel</button>
+            <button type="submit" class="btn btn-primary btn-xl" id="buy-btn">Buy</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <aside class="sticky-cta" data-sticky>
       <div class="shell sticky-row">
@@ -176,7 +278,7 @@
           <nav class="footer-nav">
             <a href="#features">Features</a>
             <a href="#safety">Safety</a>
-            
+            <a href="#gallery">Gallery</a>
             <a href="#pricing">Pricing</a>
             <a href="#">Support</a>
           </nav>
