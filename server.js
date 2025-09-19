@@ -44,8 +44,7 @@ async function ensureSchema() {
 }
 
 ensureSchema().catch((e) => {
-  console.error('Schema init failed', e);
-  process.exit(1);
+  console.warn('Schema init failed (continuing to serve static files):', e?.message || e);
 });
 
 function sanitizeString(v) { return String(v || '').trim(); }
