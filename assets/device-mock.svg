@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#131826"/>
+      <stop offset="1" stop-color="#0B0D13"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5EF0FF"/>
+      <stop offset="1" stop-color="#7BFFB1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#bg)"/>
+  <!-- Handlebar -->
+  <rect x="100" y="380" width="1000" height="40" rx="20" fill="#1b2132"/>
+  <!-- Stem -->
+  <rect x="580" y="300" width="40" height="200" rx="20" fill="#212838"/>
+  <!-- Device body -->
+  <rect x="470" y="180" width="260" height="160" rx="28" fill="#0f1320" stroke="#2b354d" stroke-width="4"/>
+  <!-- Screen -->
+  <rect x="490" y="200" width="220" height="120" rx="18" fill="#0a0e18"/>
+  <!-- UI: big arrow and distance -->
+  <path d="M590 236 l-24 24 h16 v40 h16 v-40 h16 l-24 -24z" fill="url(#accent)"/>
+  <rect x="640" y="252" width="60" height="16" rx="8" fill="#1b253a"/>
+  <text x="645" y="264" fill="#9fb2d9" font-family="Segoe UI, Roboto, Arial" font-size="12">400 m</text>
+  <!-- Buttons -->
+  <rect x="464" y="210" width="6" height="40" rx="3" fill="#263049"/>
+  <rect x="736" y="210" width="6" height="40" rx="3" fill="#263049"/>
+  <!-- Mount -->
+  <rect x="540" y="336" width="120" height="28" rx="12" fill="#1b2132"/>
+  <title>GlideNav device mock</title>
+</svg>
+
+

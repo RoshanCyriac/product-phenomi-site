@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="p" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F1320"/>
+      <stop offset="1" stop-color="#0B0D13"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5EF0FF"/>
+      <stop offset="1" stop-color="#7BFFB1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="24" fill="url(#p)"/>
+  <g opacity="0.4">
+    <circle cx="200" cy="200" r="120" stroke="url(#a)" stroke-width="2" fill="none"/>
+    <circle cx="1000" cy="600" r="100" stroke="url(#a)" stroke-width="2" fill="none"/>
+    <rect x="320" y="420" width="560" height="10" rx="5" fill="url(#a)"/>
+  </g>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#aab6d6" font-size="32" font-family="Segoe UI, Roboto, Arial">Image Placeholder</text>
+</svg>
+
+

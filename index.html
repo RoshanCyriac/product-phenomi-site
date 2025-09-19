@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GlideNav — Safer Navigation for Two-Wheelers</title>
+    <meta name="description" content="GlideNav is a minimal, bright, glove-friendly navigation display for two-wheelers. Ride safer with turn-by-turn directions and distraction-free design." />
+    <meta name="theme-color" content="#0e1016" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="GlideNav — Safer Navigation for Two-Wheelers" />
+    <meta property="og:description" content="Distraction-free navigation designed for scooters and bikes. See only what matters." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:image" content="assets/placeholder.svg" />
+
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-animate="fade-down">
+      <a class="brand" href="#home" aria-label="GlideNav Home">
+        <img src="assets/logo.svg" alt="GlideNav" class="brand-mark" />
+        <span class="brand-name">GlideNav</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <a href="#purchase" class="btn btn-primary header-cta">Preorder</a>
+    </header>
+
+    <main id="home">
+      <!-- Hero -->
+      <section class="hero" data-animate="rise">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="shell">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <h1>
+                See the turn. Keep your eyes on the road.
+              </h1>
+              <p class="lead">
+                GlideNav projects bold, glove-friendly directions for scooters and bikes—so you can ride safer without staring at a phone.
+              </p>
+              <div class="cta-row">
+                <a href="#purchase" class="btn btn-primary btn-lg">Preorder for $149</a>
+                <a href="#features" class="btn btn-ghost btn-lg">Explore features</a>
+              </div>
+              <div class="trust">
+                <span class="pill">IP67</span>
+                <span class="pill">Sunlight-readable</span>
+                <span class="pill">Haptic alerts</span>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="device" data-parallax>
+                <img src="assets/device-mock.svg" alt="GlideNav device mounted on handlebars" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Safety Story -->
+      <section id="safety" class="section safety" data-animate="fade">
+        <div class="shell">
+          <div class="split">
+            <div class="split-copy">
+              <h2>Designed for safety, not just speed</h2>
+              <p>
+                Looking at a map while riding is risky. GlideNav distills navigation into only what matters: the next turn, distance, and lane guidance. Crisp arrows, high contrast colors, and optional haptics keep your focus forward.
+              </p>
+              <ul class="checks">
+                <li>Large, glanceable turn prompts</li>
+                <li>Auto day/night contrast</li>
+                <li>Hands-free voice and haptic cues</li>
+              </ul>
+            </div>
+            <div class="split-media">
+              <img src="assets/placeholder.svg" alt="Bright, simple turn-by-turn display" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="section features" data-animate="rise">
+        <div class="shell">
+          <h2>Everything you need, nothing you don't</h2>
+          <div class="feature-grid">
+            <article class="card">
+              <div class="card-icon">⬅️➡️</div>
+              <h3>Turn-first UI</h3>
+              <p>Bold arrows with distance and lane hints—readable in a split second.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">🌞🌙</div>
+              <h3>Sunlight readable</h3>
+              <p>High-nit display with adaptive contrast for day and night.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">💧</div>
+              <h3>Weatherproof</h3>
+              <p>IP67 sealed, rain proof, with glove-ready tactile buttons.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">🔋</div>
+              <h3>All-day battery</h3>
+              <p>USB-C fast charging and 18-hour typical use.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section how" data-animate="fade">
+        <div class="shell">
+          <h2>Clip. Connect. Glide.</h2>
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              Clip the mount to your handlebar.
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              Connect via Bluetooth to your phone's maps.
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              Start riding—directions appear when you need them.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="section gallery" data-animate="rise">
+        <div class="shell">
+          <h2>In the wild</h2>
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1527601643334-2b5b46fa7ee8?q=80&w=1200&auto=format&fit=crop" alt="Scooter in city" />
+            <img src="https://images.unsplash.com/photo-1493236296276-d17357e28895?q=80&w=1200&auto=format&fit=crop" alt="Bike on road" />
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop" alt="Rider at dusk" />
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Handlebar close-up" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing / CTA -->
+      <section id="pricing" class="section pricing" data-animate="fade">
+        <div class="shell">
+          <div class="price-card">
+            <div class="price-copy">
+              <h2>Preorder today</h2>
+              <p>Early-bird pricing ends soon. Free worldwide shipping.</p>
+              <div class="price-row">
+                <span class="price">$149</span>
+                <span class="price-note">$199 at launch</span>
+              </div>
+              <a id="purchase" href="#" class="btn btn-primary btn-xl">Reserve your GlideNav</a>
+              <p class="tiny">No charge today. Cancel anytime.</p>
+            </div>
+            <div class="price-media">
+              <img src="assets/placeholder.svg" alt="Box contents: device, mount, cable" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sticky-cta" data-sticky>
+      <div class="shell sticky-row">
+        <span>GlideNav — safer navigation for two-wheelers</span>
+        <a href="#purchase" class="btn btn-primary">Preorder $149</a>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <a class="brand" href="#home">
+            <img src="assets/logo.svg" alt="GlideNav" class="brand-mark" />
+            <span class="brand-name">GlideNav</span>
+          </a>
+          <nav class="footer-nav">
+            <a href="#features">Features</a>
+            <a href="#safety">Safety</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#">Support</a>
+          </nav>
+          <p class="legal tiny">© <span id="year"></span> GlideNav Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
+
+
