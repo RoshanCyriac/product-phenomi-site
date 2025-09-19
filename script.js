@@ -180,17 +180,35 @@
 
       if (!ok) return;
 
-      // Simulate success, then redirect home
-      closeModal();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setTimeout(() => {
-        // Reset form
-        form.reset();
-        if (qty) qty.value = '1';
-        if (total) total.textContent = `$${PRICE}`;
-        // Redirect to home (same page top)
-        window.location.hash = '#home';
-      }, 400);
+      // Send to backend
+      const payload = { name, email, phone, address1: address1Val, address2: bySel('#address2')?.value || '', city: cityVal, state: stateVal, country: countryVal, pin: pinVal, qty: num };
+      bySel('#buy-btn').disabled = true;
+      fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(async (r) => {
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok || data.ok === false) {
+          // Map server errors back to UI
+          const errs = data.errors || {};
+          Object.keys(errs).forEach((key) => setError(key, errs[key]));
+          throw new Error('Submit failed');
+        }
+        // Success UI
+        closeModal();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => {
+          form.reset();
+          if (qty) qty.value = '1';
+          if (total) total.textContent = `$${PRICE}`;
+          window.location.hash = '#home';
+        }, 300);
+      }).catch(() => {
+        alert('There was a problem placing your order. Please check the form and try again.');
+      }).finally(() => {
+        bySel('#buy-btn').disabled = false;
+      });
     });
   }
 })();
